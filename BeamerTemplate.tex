@@ -83,13 +83,12 @@
 
 %-----------------------------------------------------------------------------------------------------------------------------------------%
 % テーマ設定・フォント設定・色設定
-\usetheme[numbering=fraction, block=fill]{metropolis} % モダンなテーマを設定(https://tug.org/docs/latex/beamertheme-metropolis/metropolistheme.pdf)
+\usetheme{metropolis} % モダンなテーマを設定(https://tug.org/docs/latex/beamertheme-metropolis/metropolistheme.pdf)
 
 \usefonttheme{professionalfonts}
 \renewcommand{\kanjifamilydefault}{\gtdefault} % 日本語フォントをゴシックに
 
-
-\setbeamercolor{background canvas}{bg=white} % 背景を白に(bg : ブロックの色, fg : フォントの色)
+\setbeamercolor{background canvas}{bg=white} % 背景を白に
 
 % ベースカラー3色
 \definecolor{basecolor1}{RGB}{0, 180, 255}
@@ -132,12 +131,16 @@
 }
 % subsectionを箇条書きスタイルで表示する設定
 \setbeamertemplate{subsection in toc}{
-  \leavevmode\leftskip=1em\hskip 1em\color{basecolor1}\textbullet\color{black}\hskip 1em\inserttocsubsection\par}
+	\leavevmode\leftskip=1em\hskip 1em\color{basecolor1}\textbullet\color{black}\hskip 1em\inserttocsubsection\par
+}
 
 % \setbeamertemplate{section in toc}[sections numbered]
 
 % footnote の位置を下げる
 \addtobeamertemplate{footnote}{}{\vspace{-5ex}}
+
+% page number の位置を下げる
+\setbeamertemplate{footline}[frame number]
 
 %-----------------------------------------------------------------------------------------------------------------------------------------%
 % itemize 設定
@@ -151,7 +154,7 @@
 \title{\LARGE タイトル}
 \subtitle{研究会・学会名}
 \setbeamerfont{author}{size=\Large}
-\author{筆者名}
+\author{筆者名（はしご高：\CID{8705}）}
 \setbeamerfont{institute}{size=\large}
 \institute{所属}
 \setbeamerfont{date}{size=\large}
